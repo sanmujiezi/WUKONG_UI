@@ -29,6 +29,12 @@ public class UITestEditor : MonoBehaviour
         GameDataManager.Instance.WriteGameDataFromSAPath();
     }
 
+    [MenuItem("UITestTool/Untility/ClearGameData", priority = 4)]
+    public static void ClearGameData()
+    {
+        GameDataManager.Instance.ClearGameData();
+    }
+
     [MenuItem("UITestTool/Untility/CreateGameData", priority = 1)]
     public static void CreateGameData()
     {

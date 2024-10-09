@@ -7,7 +7,8 @@ public class PanelMap
     public enum PanelType
     {
         ReadyPanel,
-        StartPanel
+        StartPanel,
+        LoadPanel
     }
 
 
@@ -20,7 +21,8 @@ public class PanelMap
     {
         panelMaps = new Dictionary<PanelType, string>(){
         {PanelType.ReadyPanel,"UI/ReadyPanel"},
-        {PanelType.StartPanel,"UI/StartPanel"}
+        {PanelType.StartPanel,"UI/StartPanel"},
+        {PanelType.LoadPanel,"UI/LoadPanel"}
     };
     }
 

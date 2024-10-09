@@ -78,6 +78,8 @@ public class ButtonManager
     private void LoadGame()
     {
         Debug.Log("Load Game");
+        UIManager.Instance.HidePanel(PanelMap.PanelType.StartPanel);
+        UIManager.Instance.ShowPanel(PanelMap.PanelType.LoadPanel);
     }
 
     private void NewGame()

@@ -44,6 +44,13 @@ public class GameDataManager
         SaveGameData();
     }
 
+    public void ClearGameData()
+    {
+        gameSavedDatas.gameSavedDatas.Clear();
+        Debug.Log("GameData was Cleared");
+        SaveGameData();
+    }
+
 
 
 
