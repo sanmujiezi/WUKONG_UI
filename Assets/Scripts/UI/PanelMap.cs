@@ -8,7 +8,8 @@ public class PanelMap
     {
         ReadyPanel,
         StartPanel,
-        LoadPanel
+        LoadPanel,
+        StoryPanel
     }
 
 
@@ -22,7 +23,8 @@ public class PanelMap
         panelMaps = new Dictionary<PanelType, string>(){
         {PanelType.ReadyPanel,"UI/ReadyPanel"},
         {PanelType.StartPanel,"UI/StartPanel"},
-        {PanelType.LoadPanel,"UI/LoadPanel"}
+        {PanelType.LoadPanel,"UI/LoadPanel"},
+        {PanelType.StoryPanel,"UI/StoryPanel"}
     };
     }
 

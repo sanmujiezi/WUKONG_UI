@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartPanel : BasePanel
 {
@@ -63,9 +64,7 @@ public class StartPanel : BasePanel
     }
 
     private void OnDestroy() {
-        foreach (var button in buttons) {
-            button.button.onClick.RemoveAllListeners();
-        }
+        
     }
 
 }
