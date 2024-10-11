@@ -8,6 +8,8 @@ public class LoadPanel : BasePanel
 {
     public ScrollRect scrollView;
     public TextMeshProUGUI savedCount;
+    private LoadButton lastSelectedButton;
+    public LoadButton LastSelectedButton => lastSelectedButton;
 
     protected override void Init()
     {
@@ -24,9 +26,16 @@ public class LoadPanel : BasePanel
         for(int i = 0; i< GameDataManager.Instance.GameSavedDatas.gameSavedDatas.Count; i++)
         {
             GameObject button = Instantiate(Resources.Load<GameObject>("UI/LoadButton"),scrollView.content.transform);
-
+            var buttonScript = button.GetComponent<LoadButton>();
+            buttonScript.gameSavedData = GameDataManager.Instance.GameSavedDatas.gameSavedDatas[i];
+            buttonScript.SetParent(this);
+            
         }
 
+    }
+
+    public void SetSelectedButton(LoadButton button){
+        lastSelectedButton = button;
     }
 
 }

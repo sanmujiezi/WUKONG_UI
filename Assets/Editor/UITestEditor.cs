@@ -56,7 +56,8 @@ public class UITestEditor : MonoBehaviour
                 gameLoop = i,
                 gameLevel = i * 30,
                 playDuration = i * 10.2f,
-                last_DateTime = System.DateTime.Now.AddHours(i).ToString()
+                last_DateTime = System.DateTime.Now.AddHours(i).ToString("yyyy年MM月dd日      tt hh:mm:ss")
+                
             });
         }
 
@@ -68,7 +69,7 @@ public class UITestEditor : MonoBehaviour
     [MenuItem("APITest/PrintDate")]
     public static void PrintDate()
     {
-        Debug.Log("当前时间：" + System.DateTime.Now);
+        Debug.Log("当前时间：" + System.DateTime.Now.ToString("yyyy年MM月dd日 tt hh:mm:ss"));
 
         Debug.Log("年：" + System.DateTime.Now.Year);
         Debug.Log("星期：" + System.DateTime.Now.DayOfWeek);
